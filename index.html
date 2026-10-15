@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>2 класс — Промежуточное оценивание (1 четверть)</title>
+  <style>
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background-color: #f0f4f8;
+      margin: 0;
+      padding: 20px;
+      color: #333;
+    }
+    .container {
+      max-width: 700px;
+      margin: 0 auto;
+      background: #ffffff;
+      padding: 25px 30px;
+      border-radius: 12px;
+      box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+    }
+    h1 {
+      text-align: center;
+      color: #1e88e5;
+      font-size: 24px;
+      margin-bottom: 5px;
+    }
+    .subtitle {
+      text-align: center;
+      color: #666;
+      font-size: 14px;
+      margin-bottom: 25px;
+    }
+    .student-info {
+      background: #e3f2fd;
+      padding: 15px;
+      border-radius: 8px;
+      margin-bottom: 20px;
+    }
+    .student-info label {
+      font-weight: bold;
+      display: block;
+      margin-bottom: 5px;
+    }
+    .student-info input {
+      width: 95%;
+      padding: 8px;
+      border: 1px solid #90caf9;
+      border-radius: 4px;
+      font-size: 15px;
+    }
+    .question {
+      margin-bottom: 20px;
+      padding-bottom: 15px;
+      border-bottom: 1px solid #eee;
+    }
+    .question p {
+      font-weight: 600;
+      font-size: 16px;
+      margin-bottom: 10px;
+    }
+    .options label {
+      display: block;
+      padding: 8px 12px;
+      margin: 4px 0;
+      background: #f9f9f9;
+      border: 1px solid #e0e0e0;
+      border-radius: 6px;
+      cursor: pointer;
+      transition: background 0.2s;
+    }
+    .options label:hover {
+      background: #e1f5fe;
+    }
+    .options input {
+      margin-right: 10px;
+    }
+    button {
+      display: block;
+      width: 100%;
+      padding: 12px;
+      background-color: #1e88e5;
+      color: white;
+      border: none;
+      border-radius: 6px;
+      font-size: 18px;
+      font-weight: bold;
+      cursor: pointer;
+      transition: background 0.2s;
+    }
+    button:hover {
+      background-color: #1565c0;
+    }
+    #result {
+      margin-top: 20px;
+      padding: 15px;
+      border-radius: 8px;
+      text-align: center;
+      font-size: 18px;
+      font-weight: bold;
+      display: none;
+    }
+    .success {
+      background-color: #e8f5e9;
+      color: #2e7d32;
+      border: 1px solid #a5d6a7;
+    }
+  </style>
+</head>
+<body>
+
+<div class="container">
+  <h1>Промежуточное оценивание за I четверть</h1>
+  <div class="subtitle">Предмет: Цифровая грамотность / Информатика (2 класс)</div>
+
+  <div class="student-info">
+    <label for="studentName">Фамилия и имя ученика:</label>
+    <input type="text" id="studentName" placeholder="Введите имя и фамилию">
+  </div>
+
+  <form id="quizForm">
+    <!-- Вопрос 1 -->
+    <div class="question">
+      <p>1. Какое устройство используется для ввода текста в компьютер?</p>
+      <div class="options">
+        <label><input type="radio" name="q1" value="a"> Монитор</label>
+        <label><input type="radio" name="q1" value="b"> Клавиатура</label>
+        <label><input type="radio" name="q1" value="c"> Колонки</label>
+      </div>
+    </div>
+
+    <!-- Вопрос 2 -->
+    <div class="question">
+      <p>2. Что из перечисленного является устройством вывода информации?</p>
+      <div class="options">
+        <label><input type="radio" name="q2" value="a"> Монитор</label>
+        <label><input type="radio" name="q2" value="b"> Мышь</label>
+        <label><input type="radio" name="q2" value="c"> Сканер</label>
+      </div>
+    </div>
+
+    <!-- Вопрос 3 -->
+    <div class="question">
+      <p>3. С помощью какого органа чувств человек получает зрительную информацию?</p>
+      <div class="options">
+        <label><input type="radio" name="q3" value="a"> Уши</label>
+        <label><input type="radio" name="q3" value="b"> Глаза</label>
+        <label><input type="radio" name="q3" value="c"> Нос</label>
+      </div>
+    </div>
+
+    <!-- Вопрос 4 -->
+    <div class="question">
+      <p>4. Как называется главное устройство компьютера («мозг»), которое обрабатывает информацию?</p>
+      <div class="options">
+        <label><input type="radio" name="q4" value="a"> Процессор</label>
+        <label><input type="radio" name="q4" value="b"> Клавиатура</label>
+        <label><input type="radio" name="q4" value="c"> Принтер</label>
+      </div>
+    </div>
+
+    <!-- Вопрос 5 -->
+    <div class="question">
+      <p>5. Какое правило безопасности нужно соблюдать при работе за компьютером?</p>
+      <div class="options">
+        <label><input type="radio" name="q5" value="a"> Трогать провода и розетки руками</label>
+        <label><input type="radio" name="q5" value="b"> Сидеть ровно на расстоянии 50–70 см от экрана</label>
+        <label><input type="radio" name="q5" value="c"> Принимать пищу и напитки прямо за клавиатурой</label>
+      </div>
+    </div>
+
+    <button type="button" onclick="checkAnswers()">Завершить тест</button>
+  </form>
+
+  <div id="result"></div>
+</div>
+
+<script>
+  function checkAnswers() {
+    const name = document.getElementById('studentName').value.trim();
+    if (!name) {
+      alert('Пожалуйста, введите ваше имя и фамилию перед отправкой.');
+      return;
+    }
+
+    const answers = { q1: 'b', q2: 'a', q3: 'b', q4: 'a', q5: 'b' };
+    let score = 0;
+    const total = 5;
+
+    for (let key in answers) {
+      const selected = document.querySelector(`input[name="${key}"]:checked`);
+      if (selected && selected.value === answers[key]) {
+        score++;
+      }
+    }
+
+    const resultDiv = document.getElementById('result');
+    resultDiv.style.display = 'block';
+    resultDiv.className = 'success';
+    resultDiv.innerHTML = `${name}, ваш результат: ${score} из ${total} баллов!`;
+  }
+</script>
+
+</body>
+</html>
